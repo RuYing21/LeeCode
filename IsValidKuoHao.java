@@ -36,7 +36,7 @@ public class IsValidKuoHao {
     // 栈 后进 先出
     public boolean isValid02(String s) {
         if(s.isEmpty())
-            return true;
+            return false;
         Stack<Character> stack=new Stack<Character>();
         for(char c:s.toCharArray()){
             if(c=='(')
