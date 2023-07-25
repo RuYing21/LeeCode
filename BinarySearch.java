@@ -5,15 +5,24 @@ public class BinarySearch {
         BinarySearch bs = new BinarySearch();
         int[] nums = {-1, 0, 3, 5, 9, 12};
         int t = 9;
-        bs.search(nums, t);
+        bs.binarySearch(nums, t);
 
     }
 
-    public int search(int[] nums, int target) {
+    /**
+     * 二分查找
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int binarySearch(int[] nums, int target) {
         int l = 0;
+        // nums 为无序数组
+//        int mid = (r - l) / 2 + l;
         int r = nums.length - 1;
-        int mid = (r - l) / 2 + l;
         while (l <= r) {
+            // nums 为有序数组
+            int mid = (r - l) / 2 + l;
             if (nums[mid] > target) {
                 r = mid - 1;
             } else if (nums[mid] < target) {

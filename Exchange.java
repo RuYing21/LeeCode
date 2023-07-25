@@ -42,7 +42,7 @@ public class Exchange {
         while(i < j) {
             // 从前往后找偶数
             while(i < j && (nums[i] & 1) == 1) i++;
-            // 从互=后往前找奇数
+            // 从后往前找奇数
             while(i < j && (nums[j] & 1) == 0) j--;
             tmp = nums[i];
             nums[i] = nums[j];
