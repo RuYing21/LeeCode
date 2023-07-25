@@ -20,7 +20,7 @@ public class LongestCommonPrefix {
             if (prefix.length() == 0)
                 break;
         }
-        System.out.printf(prefix);
+//        System.out.printf(prefix);
         return prefix;
 
     }
@@ -33,5 +33,7 @@ public class LongestCommonPrefix {
         }
         return str1.substring(0, l);
     }
+
+
 
 }

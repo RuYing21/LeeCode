@@ -1,6 +1,6 @@
 package leeCode;
 
-/*
+/**
 调整数组顺序使奇数位于偶数前面
 输入一个整数数组，实现一个函数来调整该数组中数字的顺序，使得所有奇数在数组的前半部分，所有偶数在数组的后半部分
  */
@@ -13,7 +13,7 @@ public class Exchange {
     }
 
 
-    /*
+    /**
     遍历两次数组，先找计数，放到新数组的前面，然后找偶数
      */
     public int[] exchange01(int[] nums){
@@ -34,7 +34,7 @@ public class Exchange {
 
     }
 
-    /*
+    /**
     双指针
      */
     public int[] exchange02(int[] nums) {

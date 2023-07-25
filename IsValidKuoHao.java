@@ -8,8 +8,8 @@ import java.util.Stack;
 public class IsValidKuoHao {
     public static void main(String[] args) {
         IsValidKuoHao vk = new IsValidKuoHao();
-        String s = "()[]{}";
-        vk.isValid02(s);
+        String s = "()";
+        vk.isValid03(s);
 
     }
 
@@ -50,6 +50,32 @@ public class IsValidKuoHao {
         }
         if(stack.empty())
             return true;
+        return false;
+    }
+
+
+    public boolean isValid03(String s) {
+        if(s.isEmpty()){
+            return false;
+        }
+        Stack<Character> stack  = new Stack();
+        for(char c : s.toCharArray()){
+            if(c == '('){
+                stack.push(')');
+            }
+            else if(c == '['){
+                stack.push(']');
+            }
+            else if(c == '{'){
+                stack.push('}');
+            }
+            else if(stack.empty() ||c != stack.pop() ){
+                return false;
+            }
+        }
+        if(stack.empty()){
+            return true;
+        }
         return false;
     }
 

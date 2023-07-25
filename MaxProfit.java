@@ -1,5 +1,8 @@
 package leeCode;
 
+/**
+ * 买卖股票的最佳时机
+ */
 public class MaxProfit {
     public static void main(String[] args) {
         MaxProfit mp = new MaxProfit();
@@ -23,7 +26,9 @@ public class MaxProfit {
         return max;
     }
 
-    public int maxProfit(int[] prices) {
+
+    // 动态规划
+    public int maxProfit02(int[] prices) {
         int len = prices.length;
         int res = 0;
         // 前一天卖出可以获得的最大利润
@@ -38,18 +43,4 @@ public class MaxProfit {
         return res;
     }
 
-    // 动态规划
-    public int maxProfit02(int[] prices) {
-        int len = prices.length;
-        int pre = 0;
-        int temp = 0;
-        int max = 0;
-        for (int i = 1; i < len; i++) {
-            temp = prices[i] - prices[i - 1];
-            pre = Math.max(pre + temp, 0);
-            max = Math.max(pre, max);
-        }
-        System.out.println(max);
-        return max;
-    }
 }
